@@ -1,0 +1,19 @@
+# Виртуальные окружения
+.venv/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Кэши инструментов
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Локальные настройки и секреты
+.env
+
+# IDE
+.idea/
