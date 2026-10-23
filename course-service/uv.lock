@@ -515,6 +515,20 @@ dependencies = [
 ]
 
 [package.dev-dependencies]
+dev = [
+    { name = "aiosqlite" },
+    { name = "black" },
+    { name = "httpx2" },
+    { name = "isort" },
+    { name = "locust" },
+    { name = "mypy" },
+    { name = "pylint" },
+    { name = "pytest" },
+    { name = "pytest-asyncio" },
+    { name = "pytest-cov" },
+    { name = "radon" },
+    { name = "ruff" },
+]
 lint = [
     { name = "black" },
     { name = "isort" },
@@ -544,6 +558,20 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
+dev = [
+    { name = "aiosqlite", specifier = "==0.22.1" },
+    { name = "black", specifier = "==26.5.1" },
+    { name = "httpx2", specifier = "==2.13.0" },
+    { name = "isort", specifier = "==9.0.1" },
+    { name = "locust", specifier = "==2.46.5" },
+    { name = "mypy", specifier = "==2.3.1" },
+    { name = "pylint", specifier = "==4.0.8" },
+    { name = "pytest", specifier = "==9.1.1" },
+    { name = "pytest-asyncio", specifier = "==1.4.0" },
+    { name = "pytest-cov", specifier = "==7.1.0" },
+    { name = "radon", specifier = "==6.0.1" },
+    { name = "ruff", specifier = "==0.16.8" },
+]
 lint = [
     { name = "black", specifier = "==26.5.1" },
     { name = "isort", specifier = "==9.0.1" },

@@ -14,6 +14,10 @@ dependencies = [
 ]
 
 [dependency-groups]
+dev = [
+    { include-group = "test" },
+    { include-group = "lint" },
+]
 lint = [
     "black==26.5.1",
     "isort==9.0.1",
