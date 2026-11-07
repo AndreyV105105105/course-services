@@ -25,6 +25,7 @@ lint = [
     "pylint==4.0.8",
     "radon==6.0.1",
     "ruff==0.16.8",
+    "types-pyyaml>=6.0.12.20261103",
 ]
 test = [
     "aiosqlite==0.22.1",
@@ -83,6 +84,9 @@ target-version = "py312"
 src = ["src", "tests"]
 
 [tool.ruff.lint]
+ignore = [
+    "RUF001", "RUF002", "RUF003",  # кириллица в строках/docstring'ах/комментариях — у нас русский текст
+]
 select = [
     "E", "W",   # pycodestyle - стиль PEP 8
     "F",        # pyflakes - неиспользуемые импорты/переменные, неопределённые имена

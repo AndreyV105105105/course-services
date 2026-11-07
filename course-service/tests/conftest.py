@@ -3,6 +3,7 @@ from fastapi.testclient import TestClient
 
 from src.core.config import get_settings
 from src.web.app import create_app
+from src.web.lifespans import lifespan_app
 from src.web.routers import service_router
 
 
@@ -18,7 +19,7 @@ def routers():
 
 @pytest.fixture
 def app(settings, routers):
-    return create_app(settings, routers)
+    return create_app(settings, routers, lifespan=lifespan_app)
 
 
 @pytest.fixture

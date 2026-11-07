@@ -1,3 +1,5 @@
+"""HTTP-маршруты сервиса."""
+
 import logging
 
 from fastapi import APIRouter
@@ -8,17 +10,12 @@ from src.web.schemas import ServiceInfo
 
 logger = logging.getLogger(__name__)
 
-service_router = APIRouter(
-    prefix="/service",
-    lifespan=lifespan_service_router,
-    tags=["service"]
-    )
+service_router = APIRouter(prefix="/service", lifespan=lifespan_service_router, tags=["service"])
+
 
 @service_router.get(
-        "/",
-        description="Service info route",
-        response_model=ServiceInfo,
-        status_code=200
-        )
-def info():
+    "/", description="Service info route", response_model=ServiceInfo, status_code=200
+)
+def info() -> ServiceInfo:
+    """Возвращает информацию о состоянии сервиса."""
     return get_service_info()
